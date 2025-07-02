@@ -1,0 +1,224 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1{ font-size: 4.5em;}
+h2{ font-size: 2.5em; text-align: center;}
+h3{ font-size: 2em;}
+#hero h4 {text-shadow: 2px 2px 5px black;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+/*Estilo de botones*/
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(118, 0, 187, 0.5);
+    color: white;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(137, 14, 219, 0.63);
+}
+
+header{
+    background-color: rgb(0, 0, 0); /*CAMBIAR LUEGO EL COLOR*/ 
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Encabezado*/
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(253, 139, 8);
+}
+header a:hover{
+    color: blueviolet;
+}
+
+.navbar-text-ms-3{
+    font-size: 20px;
+    color: #000;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+/* Inicio */
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url("FOTOS/img01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero button {
+    margin-top: 80px;
+    font-size: 1.75em;
+    border-radius: 10px;
+}
+#hero button a {
+    text-decoration: none;
+    color: #fff;
+}
+#hero h1{
+    color: white;
+}
+
+.bi-house-fill, .bi-people-fill, .bi-person-workspace, .bi-phone-fill,  .bi-person-standing {
+    margin-right: 10px;
+}
+
+.carta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carta:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 5);
+    box-shadow: 2px 2px 10px rgba(118, 0, 187, 0.5);
+    color:white;
+    background-color:blueviolet ;
+}
+
+button:hover{
+    background-color: rgba(137, 14, 219, 0.63) ;
+}
+
+h1 {
+    font-size: 40px;
+   -webkit-text-stroke: 0.7px rgb(0, 0, 0);
+
+}
+
+.form-container {
+    background-image:url("/Formulario-Canasta/Fotos/Fondo.jpg");
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+}
+.form-item h1{
+    margin-bottom: 20px;
+}
+.form-item {
+    background-color: #fff;
+    border: 1px solid #000;
+    opacity: 0.9;
+    border-radius: 10px;
+    width: 50%;
+    padding: 30px;
+    height: auto;
+}
+
+.form-input{
+    width: 55%;
+    border-top: none;
+    border-left: none;
+    border-radius: 9px;
+    margin: 12px;
+    padding: 12px;
+    border-right: 3px solid #f5930a;
+    border-bottom: 3px solid #f5930a;
+    transition: 0.2s;
+
+}
+
+.form-input:hover{
+    color: #f5930a;
+    border-top: none;
+    border-left: none;
+    border-radius: 10px;
+    margin: 12px;
+    padding: 12px;
+    transition: 0.2s;
+}
+
+#final {
+    height: auto;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+/*ADAPTACION DE HERO PARA MOVIL -REPONSIVE PANTALLA PEQUEÑA*/
+@media (max-width: 768px) {
+    .carta {
+        height: 250px; /* Ajusta la altura de las cartas en pantallas pequeñas */
+        background-size: cover; /* Asegura que la imagen siga cubriendo el área */
+    }
+    #hero h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    #hero h4 {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+        font-weight: normal; 
+    }
+
+    #hero button {
+        display: block;
+        margin: 20px auto;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #hero {
+        padding: 60px 20px;
+    }
+    #final 
+    {
+    height: 90vh;
+    background-color: black;
+    color: white;
+    position: relative;
+    }
+}

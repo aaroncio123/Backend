@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style_login.css" />
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+  <title>Inicio de sesión</title>
+</head>
+<body>
+  <div class="div_container">
+    <div class="div_form_container">
+      <form action="../login/autenticacion.php" method="post">
+        <div class="div_form_group">
+          <i class="bi bi-person"></i>
+          <input class="div_form_input" type="text" name="username" placeholder="Username" required />
+        </div>
+        <div class="div_form_group">
+          <i class="bi bi-envelope"></i>
+          <input class="div_form_input" type="email" name="email" placeholder="Correo electrónico" required />
+        </div>
+        <div class="div_form_group">
+          <i class="bi bi-key"></i>
+          <input class="div_form_input" type="password" name="password" placeholder="Contraseña" required />
+        </div>
+        <a href="registro.html">¿No tienes una cuenta?</a>
+        <div class="div_form_group">
+          <button type="submit" class="div_form_button">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const error = params.get("error");
+
+  if (error) {
+    switch (error) {
+      case "pass":
+        alert("La contraseña es incorrecta. Inténtalo de nuevo.");
+        break;
+      case "user":
+        alert("El usuario no existe.");
+        break;
+      case "faltan_datos":
+        alert("Por favor, completa todos los campos.");
+        break;
+      default:
+        alert("Error desconocido.");
+        break;
+    }
+  }
+</script>
+
+</html>

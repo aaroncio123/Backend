@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style_login.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+  <title>Registro de usuario</title>
+</head>
+<body>
+  <div class="div_container">
+    <div class="div_form_container">
+      <form action="../login/registro_usuario.php" method="post">
+        <div class="div_form_group">
+          <i class="bi bi-person"></i>
+          <input class="div_form_input" type="text" name="username" placeholder="Username" required />
+        </div>
+        <div class="div_form_group">
+          <i class="bi bi-envelope"></i>
+          <input class="div_form_input" type="email" name="email" placeholder="Correo electrónico" required />
+        </div>
+        <div class="div_form_group">
+          <i class="bi bi-key"></i>
+          <input class="div_form_input" type="password" name="password" placeholder="Contraseña" required />
+        </div>
+        <div class="div_form_group">
+          <button type="submit" class="div_form_button">Registrar</button>
+        </div>
+        <div class="div_form_group">
+          <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+
+  if (status) {
+    switch (status) {
+      case "success":
+        alert("Usuario registrado correctamente.");
+        break;
+      case "exists":
+        alert("El usuario ya existe.");
+        break;
+      case "error":
+        alert("Ocurrió un error al registrar. Inténtalo nuevamente.");
+        break;
+    }
+  }
+</script>
+</html>
