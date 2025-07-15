@@ -55,7 +55,7 @@
         <h2>Selecciona la base de datos:</h2>
         <ul class="list-group">
             <li class="list-group-item">
-            <a href="../adra_peru/adra_peru.php" class="btn btn-primary">Gestionar adra_peru</a>
+            <a href="../base_unificada/base_unificada.php" class="btn btn-primary">Gestionar Base de datos general</a>
             </li>
         </ul>
     </div>

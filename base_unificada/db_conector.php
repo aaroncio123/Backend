@@ -3,7 +3,7 @@ class db_conector {
     private $host = "localhost";
     private $usuario = "root"; // corregido
     private $clave = "";
-    private $db = "adra_peru";
+    private $db = "base_unificada";
     public $conexion;
 
     public function __construct() {
