@@ -1,11 +1,20 @@
 <?php
 session_start();
 
-// credenciales de base de datos
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "login";
+// Cambia esta bandera según el entorno
+$entorno = 'hosting'; // 'local' o 'hosting'
+
+if ($entorno === 'local') {
+    $dbhost = "localhost";
+    $dbuser = "root";
+    $dbpass = "";
+    $dbname = "login"; // local
+} else {
+    $dbhost = "sql103.infinityfree.com"; // tu host remoto
+    $dbuser = "if0_39546848";            // tu usuario en InfinityFree
+    $dbpass = "Yn2BxBdR5J5JB";           // tu contraseña real
+    $dbname = "if0_39546848_base_unificada"; // base en el hosting
+}
 
 // conexión
 $conexion = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
@@ -26,12 +35,10 @@ if ($stmt = $conexion->prepare('SELECT id_account, clave FROM login_admins WHERE
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo "Usuario encontrado<br>"; 
         $stmt->bind_result($id_account, $password_from_db);
         $stmt->fetch();
 
         if (password_verify($_POST['password'], $password_from_db)) {
-            echo "Contraseña verificada<br>"; 
             session_regenerate_id();
             $_SESSION['loggedin'] = true;
             $_SESSION['name'] = $_POST['username'];
@@ -39,13 +46,10 @@ if ($stmt = $conexion->prepare('SELECT id_account, clave FROM login_admins WHERE
             header('Location: vista_data.php');
             exit;
         } else {
-            echo "Contraseña incorrecta<br>"; 
             header('Location: login.html?error=pass');
             exit;
-        
         }
     } else {
-        echo "Usuario no encontrado<br>"; 
         header('Location: login.html?error=user');
         exit;
     }
@@ -54,6 +58,4 @@ if ($stmt = $conexion->prepare('SELECT id_account, clave FROM login_admins WHERE
 } else {
     echo 'Error en la consulta preparada';
 }
-
-
 ?>
