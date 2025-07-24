@@ -3,69 +3,85 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body, html {
     height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.div_container{
-    height: 400px;
+.div_container {
+    height: 100vh;
     display: flex;
-    justify-content: center; /* Posiciona centro de horizontal*/
-    align-items: center; /* Posiciona centro de vertical*/
-    margin-top: 20vh;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
 }
 
 .div_form_container {
-  width: 400px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
-
-.div_form_input{
-    width: 80%;
-    border-top: 0;
-    border-left: 0;
-    background-color: #f3eded;
-    border-right: 1px solid black;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 15px;
-    font-size: 15px;
-}
-
 
 .div_form_group {
-  display: flex;
-  align-items: center;
-  margin: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 }
 
 .div_form_group i {
-  font-size: 20px;
-  margin-right: 10px;
-  color: #333;
+    font-size: 18px;
+    margin-right: 12px;
+    color: #555;
 }
 
-.div_form_button{
-    margin: auto;
-    width: 50%;
-    height: 4vh;
-    background: #000;
-    color: #ccc;
-    transition: 0.5s;
+.div_form_input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    transition: background-color 0.3s;
 }
 
-.div_form_button:hover{
-    background-color: #57393945;
-    color: #000;
-    transition: 0.5s;
+.div_form_input:focus {
+    background-color: #eaeaea;
 }
 
-.bi bi-person-fill-lock, .bi bi-person{
-    background-color: black;
-    height: 14px;
-    width: 14px;
-    justify-content: space-between;
+.div_form_button {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
 }
 
+.div_form_button:hover {
+    background-color: #34495e;
+    color: #f1f1f1;
+}
+
+/* Corrección para íconos Bootstrap si los usas */
+.bi {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #2c3e50;
+}

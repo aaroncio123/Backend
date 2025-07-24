@@ -1,213 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Un Mundo sin Límites</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Un Mundo sin Límites</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <style>
+    .Compromiso {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px 80px; 
+      perspective: 1000px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    .columna {
+      display: flex;
+      flex-direction: column;
+      gap: 80px; 
+    }
+
+    .carta {
+      margin-bottom: 20px; 
+    }
+  </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-md bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="FOTOS/LOGO.jpg" alt="Logo Un Mundo sin Límites" height="40">
-                <span class="ms-2">Un Mundo sin Límites</span>
-            </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#navbarToggleMenu"
-                aria-controls="navbarToggleMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <i class="fas fa-bars"></i>
-            </button>
+<body style="padding-top: 90px;">
+  <nav class="navbar glassy-navbar fixed-top navbar-expand-lg" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="FOTOS/LOGO.jpg" alt="Logo" height="45" class="rounded shadow-sm" />
+        <span class="ms-3 fs-4 fw-bold text-uppercase">Un Mundo sin Límites</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white fs-2"></i>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarToggleMenu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
-                    <li class="nav-item"><a href="/GREGORIT - UMSL/index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="/GREGORIT - UMSL/sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Nuestro Trabajo</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Testimonios</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-                </ul>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link nav-anim active" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a></li>
+          <li class="nav-item"><a class="nav-link nav-anim" href="sobre-nosotros.html"><i class="fas fa-users me-1"></i>Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link nav-anim" href="nuestro-trabajo.html"><i class="fas fa-hand-holding-heart me-1"></i>Nuestro Trabajo</a></li>
+          <li class="nav-item"><a class="nav-link nav-anim" href="aliados.html"><i class="fas fa-comment-dots me-1"></i>Aliados</a></li>
+          <li class="nav-item"><a class="nav-link nav-anim" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" data-aos="fade-up">
+    <h1>JUNTOS, EXPANDIENDO POSIBILIDADES SIN LÍMITES</h1>
+    <h4>
+      Somos una Asociación Civil que busca brindar oportunidades y apoyo<br />
+      a personas en situación de vulnerabilidad, ¡porque creemos que juntos podemos construir un mundo mejor!
+    </h4>
+    <div class="boton-flex">
+      <a href=".../../Login/login.html" class="boton-enlace" data-aos="zoom-in">INGRESAR</a>
+      <a href="base_unificada/registro_manual.php" class="boton-enlace" data-aos="zoom-in" data-aos-delay="200">REGÍSTRATE</a>
+    </div>
+  </section>
+
+  <section id="Un_Mundo" data-aos="fade-up">
+    <div class="container">
+      <div class="img-01" data-aos="zoom-in"></div>
+      <h2 data-aos="fade-up">Rompiendo barreras juntos</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Un Mundo sin Límites es una Asociación Civil que busca promover la inclusión y el desarrollo de personas con discapacidad,
+        a través de programas y proyectos que fomentan su autonomía e integración en la sociedad. ¡Únete a nosotros y juntos construyamos un mundo sin límites!
+      </p>
+    </div>
+  </section>
+
+  <section id="Compromiso_Social" data-aos="fade-up">
+    <div class="container">
+      <h2>Compromiso Social</h2>
+      <div class="Compromiso">
+        <div class="columna">
+          <div class="carta carta1" data-aos="flip-left">
+            <div class="carta-inner">
+              <div class="carta-front"><h3>Inclusión y Diversidad</h3></div>
+              <div class="carta-back">
+                <p>La inclusión y diversidad son fundamentales para una sociedad justa y equitativa, donde todas las personas puedan ser aceptadas y valoradas por igual, sin importar sus diferencias</p>
+              </div>
             </div>
-        </div>
-    </nav>
-
-    <section id="hero">
-        <h1>JUNTOS, EXPANDIENDO POSIBILIDADES SIN LÍMITES</h1>
-        <h4>Somos una Asociación Civil que busca brindar oportunidades y apoyo
-        <br>a personas en situación de vulnerabilidad, ¡porque creemos que juntos podemos construir un mundo mejor!
-        </h4>
-        <button> ÚNETE AL EQUIPO</button>
-
-        <button><a href="/Formulario-Canasta/index-form.html"> SOLICITA TU CANASTA </a></button>
-    </section>
-
-    <section id="Un_Mundo">
-        <div class="container">
-            <div class="img-01"></div>
-            <h2>Rompiendo barreras juntos</h2>
-            <p>Un Mundo sin Límites es una Asociación Civil que busca
-            promover la inclusión y el desarrollo de personas con discapacidad,
-            a través de programas y proyectos que fomentan su autonomía e integración
-            en la sociedad. ¡Únete a nosotros y juntos construyamos un mundo sin límites!</p>
-        </div>
-    </section>
-
-    <section id="Compromiso_Social">
-        <div class="container">
-            <h2>Compromiso Social</h2>
-            <div class="Compromiso">
-                <div class="carta" role="button" tabindex="0">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <h3>Inclusión y Diversidad</h3>
-                        </div>
-                        <div class="carta-back">
-                            <p>La inclusión y diversidad son fundamentales para una
-                            sociedad justa y equitativa, donde todas las personas puedan ser
-                            aceptadas y valoradas por igual, sin importar sus diferencias.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carta" role="button" tabindex="0">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <h3>Impacto Social Positivo</h3>
-                        </div>
-                        <div class="carta-back">
-                            <p>El impacto social positivo transforma comunidades y crea
-                            oportunidades para el desarrollo sostenible y la igualdad.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carta" role="button" tabindex="0">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <h3>Empoderamiento Comunitario</h3>
-                        </div>
-                        <div class="carta-back">
-                            <p>El empoderamiento comunitario fomenta la participación activa
-                            y el liderazgo para construir sociedades más fuertes e inclusivas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carta" role="button" tabindex="0">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <h3>Ayudas sociales</h3>
-                        </div>
-                        <div class="carta-back">
-                            <p>El apoyo a diversas personas no se limita a nacionalidades, un mundo sin límites
-                                ha sido creado para apoyar a todos y traer alegría a la vida de las personas.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="carta carta2" data-aos="flip-left" data-aos-delay="150">
+            <div class="carta-inner">
+              <div class="carta-front"><h3>Impacto Social Positivo</h3></div>
+              <div class="carta-back">
+                <p>El impacto social positivo transforma comunidades y crea oportunidades para el desarrollo sostenible y la igualdad</p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section class="py-5" style="background-color: #7cb5ffd5;">
-        <div id="infoCardsCarousel" class="carousel slide" data-mdb-ride="carousel">
-            <div class="carousel-indicators">
-                <button
-                    type="button"
-                    data-mdb-target="#infoCardsCarousel"
-                    data-mdb-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                ></button>
-                <button
-                    type="button"
-                    data-mdb-target="#infoCardsCarousel"
-                    data-mdb-slide-to="1"
-                    aria-label="Slide 2"
-                ></button>
-                <button
-                    type="button"
-                    data-mdb-target="#infoCardsCarousel"
-                    data-mdb-slide-to="2"
-                    aria-label="Slide 3"
-                ></button>
+        <div class="columna">
+          <div class="carta carta3" data-aos="flip-left" data-aos-delay="300">
+            <div class="carta-inner">
+              <div class="carta-front"><h3>Empoderamiento Comunitario</h3></div>
+              <div class="carta-back">
+                <p>El empoderamiento comunitario fomenta la participación activa y el liderazgo para construir sociedades más fuertes e inclusivas</p>
+              </div>
             </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <div class="info-card">
-                            <h2>Avanzamos Juntos</h2>
-                            <p>Nos dedicamos a brindar apoyo y oportunidades a personas con discapacidad y<br>
-                            en situación de vulnerabilidad. Ofrecemos programas de inclusión, orientación<br>
-                            y capacitación para promover una sociedad más inclusiva y equitativa. <br>
-                            ¡Únete a nosotros y juntos construyamos un mundo sin límites!</p>
-                            <ul>
-                                <li>✅ Programas de voluntariado</li>
-                                <li>✅ Talleres educativos</li>
-                                <li>✅ Campañas de concientización</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="info-card">
-                            <h2>Apoyo que Transforma</h2>
-                            <p>Un Mundo sin Límites es una organización dedicada a brindar apoyo y recursos a<br>
-                            comunidades vulnerables en todo el mundo. Nuestro objetivo es crear un mundo más justo<br>
-                            y equitativo, donde no existan limitaciones para alcanzar el bienestar y la felicidad.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="info-card">
-                            <h2>Voces con Impacto</h2>
-                            <p>"Un Mundo sin Límites ha sido una luz de esperanza para mi comunidad. Gracias a su labor, hemos<br>
-                            recibido apoyo y recursos para mejorar nuestras condiciones de vida. Son una organización comprometida<br>
-                            y dedicada, siempre dispuesta a ayudar." - Juan, beneficiario de la asociación.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="carta carta4" data-aos="flip-left" data-aos-delay="450">
+            <div class="carta-inner">
+              <div class="carta-front"><h3>Ayudas sociales</h3></div>
+              <div class="carta-back">
+                <p>El apoyo a diversas personas no se limita a nacionalidades, un mundo sin límites ha sido creado para apoyar a todos y traer alegría a la vida de las personas</p>
+              </div>
             </div>
-
-            <button
-                class="carousel-control-prev"
-                type="button"
-                data-mdb-target="#infoCardsCarousel"
-                data-mdb-slide="prev"
-            >
-                <i class="fas fa-chevron-left" aria-hidden="true"></i> <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-                class="carousel-control-next"
-                type="button"
-                data-mdb-target="#infoCardsCarousel"
-                data-mdb-slide="next"
-            >
-                <i class="fas fa-chevron-right" aria-hidden="true"></i> <span class="visually-hidden">Next</span>
-            </button>
+          </div>
         </div>
-    </section>
-    <footer id="final">
-        <div class="container">
-            <p>&copy; Un Mundo sin Límites</p>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+  <section class="py-5" style="background-color: #7daaac5d;" data-aos="fade-up">
+    <div id="infoCardsCarousel" class="carousel slide" data-mdb-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-mdb-target="#infoCardsCarousel" data-mdb-slide-to="0" class="active"></button>
+        <button type="button" data-mdb-target="#infoCardsCarousel" data-mdb-slide-to="1"></button>
+        <button type="button" data-mdb-target="#infoCardsCarousel" data-mdb-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <div class="info-card" data-aos="zoom-in">
+              <h2>Avanzamos Juntos</h2>
+              <p>Nos dedicamos a brindar apoyo y oportunidades a personas con discapacidad y en situación de vulnerabilidad. Ofrecemos programas de inclusión, orientación y capacitación para promover una sociedad más inclusiva y equitativa. ¡Únete a nosotros y juntos construyamos un mundo sin límites!</p>
+              <ul>
+                <li>Programas de voluntariado</li>
+                <li>Talleres educativos</li>
+                <li>Campañas de concientización</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="info-card" data-aos="zoom-in">
+              <h2>Apoyo que Transforma</h2>
+              <p>Un Mundo sin Límites es una organización dedicada a brindar apoyo y recursos a comunidades vulnerables en todo el mundo. Nuestro objetivo es crear un mundo más justo y equitativo, donde no existan limitaciones para alcanzar el bienestar y la felicidad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="info-card" data-aos="zoom-in">
+              <h2>Voces con Impacto</h2>
+              <p>"Un Mundo sin Límites ha sido una luz de esperanza para mi comunidad. Gracias a su labor, hemos recibido apoyo y recursos para mejorar nuestras condiciones de vida. Son una organización comprometida y dedicada, siempre dispuesta a ayudar." - Juan, beneficiario de la asociación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="final" data-aos="fade-up">
+    <div class="container">
+      <p>&copy; Un Mundo sin Límites</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>

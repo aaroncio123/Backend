@@ -3,17 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style_login.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
   <title>Registro de usuario</title>
+
+  <!-- Fuente profesional -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Iconos Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+      color: #333;
+    }
+
+    .div_container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .div_form_container {
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 420px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #1d3557;
+    }
+
+    .div_form_group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    .div_form_group i {
+      font-size: 18px;
+      margin-right: 12px;
+      color: #1d3557;
+    }
+
+    .div_form_input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 12px 10px;
+      font-size: 15px;
+      background-color: #f1f1f1;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .div_form_input:focus {
+      background-color: #e3e3e3;
+    }
+
+    .div_form_button {
+      width: 100%;
+      padding: 12px 0;
+      background-color: #1d3557;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .div_form_button:hover {
+      background-color: #457b9d;
+    }
+
+    .enlace-centro {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .enlace-centro a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #1d3557;
+      transition: color 0.3s ease;
+    }
+
+    .enlace-centro a:hover {
+      color: #2a9d8f;
+    }
+  </style>
 </head>
 <body>
   <div class="div_container">
     <div class="div_form_container">
+      <h2>Registro de Usuario</h2>
       <form action="../login/registro_usuario.php" method="post">
         <div class="div_form_group">
           <i class="bi bi-person"></i>
-          <input class="div_form_input" type="text" name="username" placeholder="Username" required />
+          <input class="div_form_input" type="text" name="username" placeholder="Nombre de usuario" required />
         </div>
         <div class="div_form_group">
           <i class="bi bi-envelope"></i>
@@ -23,32 +129,27 @@
           <i class="bi bi-key"></i>
           <input class="div_form_input" type="password" name="password" placeholder="Contraseña" required />
         </div>
-        <div class="div_form_group">
-          <button type="submit" class="div_form_button">Registrar</button>
-        </div>
-        <div class="div_form_group">
+
+        <button type="submit" class="div_form_button">Registrar</button>
+
+        <!-- Enlace centrado -->
+        <div class="enlace-centro">
           <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
         </div>
       </form>
     </div>
   </div>
-</body>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const status = params.get("status");
 
-  if (status) {
-    switch (status) {
-      case "success":
-        alert("Usuario registrado correctamente.");
-        break;
-      case "exists":
-        alert("El usuario ya existe.");
-        break;
-      case "error":
-        alert("Ocurrió un error al registrar. Inténtalo nuevamente.");
-        break;
+  <script>
+    const status = new URLSearchParams(window.location.search).get("status");
+
+    if (status === "success") {
+      alert("✅ Usuario registrado correctamente.");
+    } else if (status === "exists") {
+      alert("⚠️ El nombre de usuario ya existe. Elige otro.");
+    } else if (status === "error") {
+      alert("❌ Ocurrió un error al registrar. Intenta nuevamente.");
     }
-  }
-</script>
+  </script>
+</body>
 </html>

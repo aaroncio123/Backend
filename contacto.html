@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Mundo sin Límites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f9ff;
+    }
+
+    .contact-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-enviar {
+      background-color: #4da6ff;
+      color: white;
+    }
+
+    .btn-enviar:hover {
+      background-color: #3399ff;
+    }
+
+    .social-icons a {
+      transition: transform 0.2s;
+      margin: 0 10px;
+    }
+
+    .social-icons a .fa-facebook-f { color: #3b5998; }
+    .social-icons a .fa-instagram { color: #e4405f; }
+    .social-icons a .fa-twitter { color: #1da1f2; }
+    .social-icons a .fa-youtube { color: #ff0000; }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR-->
+<nav class="navbar glassy-navbar fixed-top navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="FOTOS/LOGO.jpg" alt="Logo" height="45" class="rounded shadow-sm" />
+      <span class="ms-3 fs-4 fw-bold text-uppercase">Un Mundo sin Límites</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white fs-2"></i>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link nav-anim active" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-anim" href="sobre-nosotros.html"><i class="fas fa-users me-1"></i>Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-anim" href="nuestro-trabajo.html"><i class="fas fa-hand-holding-heart me-1"></i>Nuestro Trabajo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-anim" href="aliados.html"><i class="fas fa-comment-dots me-1"></i>Aliados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-anim" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="contact-wrapper">
+  <div class="contact-card">
+    <h2 class="mb-3">Contáctanos</h2>
+    <p class="mb-4">Escríbenos o síguenos en nuestras redes sociales.</p>
+
+    <!-- Formulario -->
+    <form id="formulario">
+      <div class="form-outline mb-3">
+        <input type="text" id="nombre" class="form-control" required />
+        <label class="form-label" for="nombre">Nombre completo</label>
+      </div>
+      <div class="form-outline mb-3">
+        <input type="email" id="correo" class="form-control" required />
+        <label class="form-label" for="correo">Correo electrónico</label>
+      </div>
+      <div class="form-outline mb-3">
+        <textarea id="mensaje" class="form-control" rows="3" required></textarea>
+        <label class="form-label" for="mensaje">Mensaje</label>
+      </div>
+      <button type="submit" class="btn btn-enviar px-4">Enviar</button>
+    </form>
+    <div class="social-icons mt-4">
+      <a href="https://facebook.com" target="_blank" class="fs-4"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" class="fs-4"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" class="fs-4"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com" target="_blank" class="fs-4"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center py-4 mt-5">
+  <p class="mb-0">© 2025 Un Mundo sin Límites. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Incluye el script de MDB UI Kit (solo esto) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+
+<!-- Código JavaScript personalizado para el formulario -->
+<script>
+  document.getElementById('formulario').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let nombre = document.getElementById('nombre').value.trim();
+    let correo = document.getElementById('correo').value.trim();
+    let mensaje = document.getElementById('mensaje').value.trim();
+
+    let texto = `Hola, soy ${nombre}. Mi correo es ${correo}. Mensaje: ${mensaje}`;
+    let numero = '51994911410';
+
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  });
+</script>
+</body>
+</html>
